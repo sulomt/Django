@@ -1,0 +1,28 @@
+
+{% extends "sulom/header.html" %}
+{% block content %}
+
+<style>
+
+	h3{
+	background-color:#FAF602
+	}
+ div.container{
+	background-color:#FCFC8A
+	}
+</style>
+
+<h3><a href="/learnit/{{subs.id}}">{{ subs.title }}</a></h3>
+<h6> on {{ subs.date }}</h6>
+
+<div class = "container">
+	
+	{{ subs.body|safe|linebreaks}}
+	
+</div>
+
+<br><br>
+
+{% endblock %}
+
+

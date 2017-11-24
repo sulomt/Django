@@ -1,0 +1,13 @@
+{% extends "sulom/header.html" %}
+{% block content %}
+
+<style>
+
+	h5{
+	background-color:#F6F8D6
+	}
+</style>
+	{% for post in object_list %}
+		<h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}">  {{ post.title }}</a></h5>
+	{% endfor %}
+{% endblock %}
